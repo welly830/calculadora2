@@ -1,0 +1,63 @@
+
+{
+    "id": "/",
+    "scope": "/",
+    "name": "calculadorapwa",
+    "display": "standalone",
+    "start_url": "/",
+    "short_name": "calculadorapwa",
+    "theme_color": "#ffffff",
+    "description": "This is a PWA Starter app",
+    "orientation": "any",
+    "background_color": "#ffffff",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "display_override": ["window-controls-overlay"],
+    "icons": [
+      {
+        "src": "/logo.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "/favicon-150x150.png",
+        "sizes": "150x150",
+        "type": "image/png"
+      },
+      {
+        "src": "/favicon-32x32.png",
+        "sizes": "32x32",
+        "type": "image/png"
+      },
+      {
+        "src": "/favicon-16x16.png",
+        "sizes": "16x16",
+        "type": "image/png"
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/screenshot.png",
+        "sizes": "905x727",
+        "type": "image/png"
+      }
+    ],
+    "features": [
+      "Cross Platform",
+      "fast",
+      "simple"
+    ],
+    "categories": [
+      "social"
+    ],
+    "shortcuts": [
+      {
+        "name": "Open About",
+        "short_name": "About",
+        "description": "Open the about page",
+        "url": "/about",
+        "icons": [{ "src": "/favicon-150x150.png", "sizes": "150x150" }]
+      }
+    ]
+  }
+  
