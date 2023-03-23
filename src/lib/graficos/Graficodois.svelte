@@ -1,45 +1,63 @@
 <script>
 // @ts-nocheck
 
+    import { onMount } from 'svelte';
     import Chart from 'chart.js/auto';
-  import { onDestroy, onMount } from 'svelte';
-    
-    /**
-   * @type {Chart<"line", number[], string>}
-   */
+  
     let chart;
-    let valorData = 10;
-    let chartData = [0, valorData, 5, 2, 20, 30, 45];
-
-    
-    
-    onMount(() => {
-      const ctx = document.getElementById('chart').getContext('2d');
+    let data_label =  [...Array(10).keys()];
+    let data_valor = [...Array(10).keys()].map(x => (x ** 2));
+    let colunas = ['','Label', 'Valor'];
+  
+    const createChart = () => {
+      const canvas = document.getElementById('myChart2');
+      const ctx = canvas.getContext('2d');
       chart = new Chart(ctx, {
         type: 'line',
         data: {
-          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+          labels: data_label,
           datasets: [{
-            label: 'My Dataset',
-            data: chartData,
-            borderColor: 'rgb(255, 99, 132)',
+            label: 'y = x^2',
+            data: data_valor,
+            fill: false,
+            borderColor: 'rgb(75, 192, 192)',
             tension: 0.1
           }]
-        }
+        },
+        options: {}
       });
-    });
-
-   
-    
-    
-    onDestroy(() => {
-      chart.destroy();
-    });
+    };
+  
+    onMount(createChart);
   </script>
-  <div>
-    <input bind:value={valorData} type="number" placeholder="enter your name">
   
+  <div >
+    <div >
+        <canvas id="myChart2" ></canvas>  
+    </div> 
+    <div >
+        <table class="table table-compact w-full">
+            <thead>
+                
+              <tr  class="hover">
+                <th>Label</th>
+                <th>valor</th>
+              </tr>
+
+            </thead>
+            <tbody>
+              {#each data_label as item, i}
+                <tr  class="hover">
+                  <td>{item}</td>
+                  <td>{data_valor[i]}</td>
+                </tr>
+              {/each}
+            </tbody>
+          </table>     
+          
+    </div>
+
+      
   </div>
-  
-  <canvas id="chart"></canvas>
-  
+
+

@@ -6,7 +6,7 @@
         
       let chart;
   let chartData = [0, 5, 2, 20, 30, 45];
-  let newValue;
+  let newValue = 10;
 
   function updateChartData() {
     chartData[2] = newValue; // altere o valor na posição desejada
@@ -33,11 +33,11 @@
     });
   });
       </script>
-      <div>
-        <input type="number" bind:value={newValue} on:input={updateChartData} />
+      <div >
+        <input class="input input-bordered input-xs w-full max-w-xs" type="number" bind:value={newValue} on:input={updateChartData} />
 
       
       </div>
       
-      <canvas id="myChart"></canvas>
+      <canvas id="myChart" ></canvas>
       

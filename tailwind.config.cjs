@@ -5,6 +5,11 @@ const config = {
   content: ["./src/**/*.{html,js,svelte,ts}"],
 
   theme: {
+    container: {
+      screens: {
+        //sm: '500px',
+      }
+    },
     
     extend: {},
   },
