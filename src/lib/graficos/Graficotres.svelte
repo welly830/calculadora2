@@ -33,11 +33,21 @@
     });
   });
       </script>
-      <div >
-        <input class="input input-bordered input-xs w-full max-w-xs" type="number" bind:value={newValue} on:input={updateChartData} />
+    
 
-      
+      <div class="form-control w-full max-w-xs">
+        <!-- svelte-ignore a11y-label-has-associated-control -->
+        <label class="label">
+          <span class="label-text">Informe o valor?</span>          
+        </label>
+        <input type="text" placeholder="Type here" class="input input-bordered input-xs w-full max-w-xs" bind:value={newValue} on:input={updateChartData} />
+        
       </div>
+
+
+
+
+
       
       <canvas id="myChart" ></canvas>
       

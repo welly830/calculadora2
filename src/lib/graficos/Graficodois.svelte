@@ -35,6 +35,7 @@
     <div >
         <canvas id="myChart2" ></canvas>  
     </div> 
+    <br>
     <div >
         <table class="table table-compact w-full">
             <thead>
