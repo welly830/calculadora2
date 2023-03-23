@@ -26,5 +26,8 @@
 		"vite": "^4.2.0",
 		"vite-plugin-pwa": "^0.14.4"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"daisyui": "^2.51.5"
+	}
 }

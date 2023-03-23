@@ -7,6 +7,6 @@
 
 </script>
 
-<button on:click={somarClick} >
+<button on:click={somarClick} class="btn btn-outline btn btn-xs ">
     Cliques {count}
 </button>
