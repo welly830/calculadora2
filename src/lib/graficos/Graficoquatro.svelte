@@ -125,8 +125,8 @@ function updateChartData() {
     <div >
       <canvas id="myChart2" ></canvas>  
   </div> 
-    <div >
-        <table class="table table-compact w-full">
+    <div class="overflow-x-auto">
+        <table class="table table-compact w-full ">
             <thead>
                 
               <tr  class="hover">
