@@ -4,6 +4,7 @@
   import EachBlocks from "$lib/EachBlocks.svelte";
   import Grafico from "$lib/graficos/Grafico.svelte";
   import Graficodois from "$lib/graficos/Graficodois.svelte";
+  import Graficoquatro from "$lib/graficos/Graficoquatro.svelte";
   import Graficotres from "$lib/graficos/Graficotres.svelte";
 
   import TextInputs from "$lib/TextInputs.svelte";
@@ -21,18 +22,18 @@
     <p>fasdfasdf</p>
   </div>
   <div data-theme="light" class=" container max-w-screen-sm mx-auto  ">
-    <Graficodois/>
+    <Graficoquatro/>
     
     
   </div>
 
 </div>
 
-<div data-theme="light" class=" container max-w-screen-sm mx-auto  ">
+<!-- <div data-theme="light" class=" container max-w-screen-sm mx-auto  ">
     
     
   <Graficotres/>
-</div>
+</div> -->
 
 
 

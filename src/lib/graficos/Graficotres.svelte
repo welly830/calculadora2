@@ -7,10 +7,12 @@
       let chart;
   let chartData = [0, 5, 2, 20, 30, 45];
   let newValue = 10;
+  let meses =  [...Array(600).keys()];
 
   function updateChartData() {
     chartData[2] = newValue; // altere o valor na posição desejada
    // chart.data.datasets[0].data = chartData;
+   
     chart.update();
   }
 
@@ -44,7 +46,21 @@
         
       </div>
 
+      <div class="form-control w-full max-w-xs">
+        <!-- svelte-ignore a11y-label-has-associated-control -->
+        <label class="label">
+          <span class="label-text">Informe o valor!</span>
+          
+        </label>
+        <select bind:value={newValue} on:input={updateChartData} class="select select-bordered select-md w-full max-w-xs">
+          
+          {#each meses as item}
+             <option >{item}</option>
+          {/each}
+        </select>
+        <!-- svelte-ignore a11y-label-has-associated-control -->
 
+      </div>
 
 
 
